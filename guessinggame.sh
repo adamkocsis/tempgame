@@ -1,8 +1,4 @@
 #!/bin/bash
-
-# functions
-
-# praise the user!
 function praise {
 	echo "Good job! You guessed right!"
 }
@@ -20,12 +16,9 @@ read given
   	echo
   	echo "Enter a natural number: "
   	read given
-  done
-
-	  
+  done	  
 # count how many files there are inthe current folder
 current=$(ls  | wc -l)
-
 
 while [[ "$given" -ne "$current" ]]
 do
@@ -36,13 +29,11 @@ do
 	else
 		echo "Your guess was too low."
 	fi
-
 	# ask the user to enter another one
 	echo "Guess again!"
 	echo
 	echo "Enter a natural number : "
 	read given
-
   while ! [[ $given =~ $re ]]
   do
   	echo "This is not a natural number... Try again!"
@@ -50,12 +41,8 @@ do
   	echo "Enter a natural number: "
   	read given
   done
-
 done
-
-
 # Prais the user!
 praise
-
 echo "The program will now exit."
 
